@@ -1,347 +1,388 @@
 <!DOCTYPE html>
 <!-- saved from url=(0027)http://www.vamcrossfit.com/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-<script type="text/javascript" src="./VAM CrossFit_files/b4d74b88b8"></script><script src="./VAM CrossFit_files/nr-1215.min.js"></script><script async="" src="./VAM CrossFit_files/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"b4d74b88b8","applicationID":"23096552","transactionName":"cw1dTBdfCQlURR5DAV8SX11KWQsBVE8=","queueTime":5,"applicationTime":5,"agent":""}</script>
-<script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"b4d74b88b8",applicationID:"23096552"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+
+  <script type="text/javascript" src="./VAM CrossFit_files/b4d74b88b8"></script><script src="./VAM CrossFit_files/nr-1215.min.js"></script><script async="" src="./VAM CrossFit_files/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"b4d74b88b8","applicationID":"23096552","transactionName":"cw1dTBdfCQlURR5DAV8SX11KWQsBVE8=","queueTime":5,"applicationTime":5,"agent":""}</script>
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"b4d74b88b8",applicationID:"23096552"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
   <title>VAM CrossFit</title>
   <meta name="Description" content="Tu box de Crossfit en la zona Oeste de Madrid | Calle Puerto de Guadarrama 41, nave 20. Poligono Industrial Las Nieves. 28935 Móstoles, Madrid">
   <meta name="Keywords" content="CrossFit, Madrid, Móstoles, Villaviciosa de Odón, Alcorcón, España, Fitness, Gym, Gimnasio">
   <meta property="og:title" content="VAM CrossFit">
-<meta property="og:type" content="website">
-<meta property="og:url" content="http://www.vamcrossfit.com/">
-<meta property="og:description" content="Tu box de CrossFit oficial en la zona Oeste de Madrid. Perfecto para venir desde Villaviciosa de Odón, Alcorcón o Móstoles">
-<meta property="og:locale" content="es_ES">
-<meta property="og:site_name" content="VAM Crossfit">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.vamcrossfit.com/">
+  <meta property="og:description" content="Tu box de CrossFit oficial en la zona Oeste de Madrid. Perfecto para venir desde Villaviciosa de Odón, Alcorcón o Móstoles">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="VAM Crossfit">
 
 
-<meta property="og:image" content="http://www.vamcrossfit.com/assets/main_OG-91dff20b659636e0de6f916b2a7cb0cebfebc3dfe15e552f20e44c1f6d000593.png">
+  <meta property="og:image" content="http://www.vamcrossfit.com/assets/main_OG-91dff20b659636e0de6f916b2a7cb0cebfebc3dfe15e552f20e44c1f6d000593.png">
 
 
   <link rel="stylesheet" media="all" href="./VAM CrossFit_files/application-60c8835266db0ca3f179580d7ee68f2c3d44ec9c95479d81b185f47b05cdbafc.css" data-turbolinks-track="true">
   <script src="./VAM CrossFit_files/application-4761a3c94e4feb28e3e20784e3bf59c6b4e758df9a0bfc17302b630d0790f1b5.js" data-turbolinks-track="true"></script>
   <meta name="csrf-param" content="authenticity_token">
-<meta name="csrf-token" content="wxadjxe4f7mtbfF7lP1PeYXDfP0pw3CJ4jDY3tTJGV+Z5wzovVoXQa7gWXRTmVqbNzaXmRb4g3xo2URK5ZAqlg==">
+  <meta name="csrf-token" content="wxadjxe4f7mtbfF7lP1PeYXDfP0pw3CJ4jDY3tTJGV+Z5wzovVoXQa7gWXRTmVqbNzaXmRb4g3xo2URK5ZAqlg==">
 
   <link rel="apple-touch-icon" sizes="57x57" href="http://www.vamcrossfit.com/assets/favicons/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="http://www.vamcrossfit.com/assets/favicons/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="http://www.vamcrossfit.com/assets/favicons/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="http://www.vamcrossfit.com/assets/favicons/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="http://www.vamcrossfit.com/assets/favicons/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="http://www.vamcrossfit.com/assets/favicons/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="http://www.vamcrossfit.com/assets/favicons/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="http://www.vamcrossfit.com/assets/favicons/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="http://www.vamcrossfit.com/assets/favicons/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="http://www.vamcrossfit.com/assets/favicons/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="http://www.vamcrossfit.com/assets/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="http://www.vamcrossfit.com/assets/favicons/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="http://www.vamcrossfit.com/assets/favicons/favicon-16x16.png"><link rel="manifest" href="http://www.vamcrossfit.com/assets/favicons/manifest.json"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
   <link href="./VAM CrossFit_files/css" rel="stylesheet">
 </head>
 <body>
-	<div id="main" class="people index ">
-		<!-- Hero footer: will stick at the bottom -->
-<div id="header-huge">
-  <img class="logo-huge" src="./VAM CrossFit_files/logo-2beb70a6094f95cee9d61d7ad14458ba58b3f23fa86c004985a764630f93d839.png" alt="Logo">
+<div id="main" class="people index ">
+  <!-- Hero footer: will stick at the bottom -->
+  <div id="header-huge">
+    <img class="logo-huge" src="./VAM CrossFit_files/logo-2beb70a6094f95cee9d61d7ad14458ba58b3f23fa86c004985a764630f93d839.png" alt="Logo">
 
-</div>
+  </div>
 
-<div class="container">
-  <div id="main-nav">
-  <ul>
-    <li><a href="http://www.vamcrossfit.com/#quienes-somos">Quiénes somos</a></li>
-    <li><a href="http://www.vamcrossfit.com/#donde-estamos">Dónde estamos</a></li>
-    <li><a href="http://www.vamcrossfit.com/#entrena-con-nosotros">Entrena con nosotros</a></li>
-    <li><a target="_blank" href="http://reservas.vamcrossfit.com/">Reservar clase</a></li>
-  </ul>
-</div>
-
-</div>
-
-<div id="ofertas">
-  <p class="oferta">Prueba CrossFit gratis durante una semana<br>
-    <a href="tel:+34623172079">¡¡Contáctanos y reserva tu clase!!</a></p>
-</div>
-
-<div id="quienes-somos" class="section">
   <div class="container">
-    <div id="action-shot">
-      <img src="./VAM CrossFit_files/snatch-936d4ee24b1d5e22be4c6d98bd64e002b37bb912b5d3d775fef445eefadc6402.png" alt="Snatch">
+    <div id="main-nav">
+      <ul>
+        <li><a href="http://www.vamcrossfit.com/#quienes-somos">Quiénes somos</a></li>
+        <li><a href="http://www.vamcrossfit.com/#donde-estamos">Dónde estamos</a></li>
+        <li><a href="http://www.vamcrossfit.com/#entrena-con-nosotros">Entrena con nosotros</a></li>
+        <li><a target="_blank" href="https://vam.wodbuster.com">Reservar clase</a></li>
+      </ul>
     </div>
-    <div id="lead">
-      <p class="big-text">Tu box de CrossFit<sup class="registered">®</sup> oficial en Villaviciosa de Odón</p>
-      <p>Apúntate ahora y disfruta del mejor entrenamiento al mejor precio</p>
 
-      <div id="lead-social">
-        <span id="lead-fb"><a href="https://www.facebook.com/vamcrossfit/"><img alt="facebook logo" src="./VAM CrossFit_files/fb-icon2x-a788238de4784938c233a85037164282fe62f5932778c0da9dce9d165dec6db2.png"> /vamcrossfit</a> </span>
-        <span id="lead-insta"><a href="https://www.instagram.com/vamcrossfit/"><img alt="instagram logo" src="./VAM CrossFit_files/insta-icon2x-3f49091f09214014f8909e455274fb0f74d0ca5bf75f51ce5b99d8774d4ae838.png"> @vamcrossfit</a></span>
+  </div>
+
+  <div id="ofertas">
+    <p class="oferta">Prueba CrossFit gratis durante una semana<br>
+      <a href="https://vam.wodbuster.com/contratar.aspx">¡¡Contáctanos y reserva tu clase!!</a></p>
+  </div>
+
+  <div id="quienes-somos" class="section">
+    <div class="container">
+      <div id="action-shot">
+        <img src="./VAM CrossFit_files/snatch-936d4ee24b1d5e22be4c6d98bd64e002b37bb912b5d3d775fef445eefadc6402.png" alt="Snatch">
+      </div>
+      <div id="lead">
+        <p class="big-text">Tu box de CrossFit<sup class="registered">®</sup> oficial en Villaviciosa de Odón</p>
+        <p>Apúntate ahora y disfruta del mejor entrenamiento al mejor precio</p>
+
+        <div id="lead-social">
+          <span id="lead-fb"><a href="https://www.facebook.com/vamcrossfit/"><img alt="facebook logo" src="./VAM CrossFit_files/fb-icon2x-a788238de4784938c233a85037164282fe62f5932778c0da9dce9d165dec6db2.png"> /vamcrossfit</a> </span>
+          <span id="lead-insta"><a href="https://www.instagram.com/vamcrossfit/"><img alt="instagram logo" src="./VAM CrossFit_files/insta-icon2x-3f49091f09214014f8909e455274fb0f74d0ca5bf75f51ce5b99d8774d4ae838.png"> @vamcrossfit</a></span>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div id="donde-estamos" class="section">
-  <div class="container">
-    <div id="address">
-      <h1>Dónde estamos</h1>
-      <p class="big-text">Calle Puerto de Guadarrama 41.<br>
-      Polígono industrial Las Nieves<br>
-    28935 Móstoles, Madrid</p>
-      <p>Perfecto para venir desde Villaviciosa de Odón, Alcorcón o Móstoles. <span id="map-switch"><a target="_blank" href="https://goo.gl/maps/zwLyhdbgk3A2">Ver mapa de area</a></span></p>
-      <br>
-      <p>Autobuses <strong>510A</strong> y <strong>518</strong> (parada calle Plasencia)</p>
-    </div>
-    <div id="map"><img alt="detail map" id="detail-map" src="./VAM CrossFit_files/detail_map2x-1e952001a9edb03620a280b21afff66156dde36fd7a9cba6881216a2c1be2178.jpg"><img alt="area map" id="area-map" src="./VAM CrossFit_files/area_map2x-b7b24b48cfd0c1b84d090696be0e407ceb7c40a08e54b890472ffc68e6e3f9af.jpg"></div>
+  <div id="donde-estamos" class="section">
+    <div class="container">
+      <div id="address">
+        <h1>Dónde estamos</h1>
+        <p class="big-text">Calle Puerto Navacerrada 95B.<br>
+          Polígono industrial Las Nieves<br>
+          28935 Móstoles, Madrid</p>
+        <p>Perfecto para venir desde Villaviciosa de Odón, Alcorcón o Móstoles. <span id="map-switch"><a target="_blank" href="https://goo.gl/maps/zwLyhdbgk3A2">Ver mapa de area</a></span></p>
+        <br>
+        <p>Autobuses <strong>510A</strong> y <strong>518</strong> (parada ALDI)</p>
+      </div>
+      <div id="map">
+        <!--img alt="detail map" id="detail-map" src="./VAM CrossFit_files/detail_map2x-1e952001a9edb03620a280b21afff66156dde36fd7a9cba6881216a2c1be2178.jpg"><img alt="area map" id="area-map" src="./VAM CrossFit_files/area_map2x-b7b24b48cfd0c1b84d090696be0e407ceb7c40a08e54b890472ffc68e6e3f9af.jpg"-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.680563994687!2d-3.887590984071964!3d40.349431667652624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418e5b8fde23d3%3A0x2dc262bc9599625c!2sVAM%20CrossFit!5e0!3m2!1ses!2ses!4v1643671078343!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
 
-  </div>
-</div>
-
-<div id="entrena-con-nosotros" class="section">
-  <div class="container">
-    <h1>Entrena con nosotros</h1>
-    <div id="horario">
-      <p class="big-text">Horario</p>
-      <table>
-  <tbody><tr>
-    <th></th>
-    <th>Lunes</th>
-    <th>Martes</th>
-    <th>Miércoles</th>
-    <th>Jueves</th>
-    <th>Viernes</th>
-    <th>Sábado</th>
-  </tr>
-  <tr>
-    <th scope="row">8.00</th>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">9.00</th>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">10.00</th>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-halterofilia">Halterofilia</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-halterofilia">Halterofilia</a></td>
-  </tr>
-  <tr>
-    <th scope="row">11.00</th>
-    <td><a href="http://www.vamcrossfit.com/#class-endurance">Endurance</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-halterofilia">Halterofilia</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-endurance">Endurance</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">11.30</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td><a href="http://www.vamcrossfit.com/#class-team">Team CrossFit</a></td>
-  </tr><tr>
-    <th scope="row">12.00</th>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">13.30</th>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">14.30</th>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">15.30</th>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">16.00</th>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">17.00</th>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-endurance">Endurance</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">18.00</th>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">19.00</th>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-halterofilia">Halterofilia</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">20.00</th>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-gimnasticos">Gimnásticos</a></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">21.00</th>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
-    <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
-    <td></td>
-  </tr>
-</tbody></table>
-
-    </div>
-    <div id="class-type">
-      <p class="big-text">Tipos de clases</p>
-      <h2 id="class-crossfit">CrossFit</h2>
-<p>Entrenamiento funcional constantemente variado de alta intensidad</p>
-<p>Los movimientos funcionales son aquellos en los que hacemos gestos que tienen transferencia a otros deportes o a la vida cotidiana. Son movimientos multiarticulares que quieren de más coordinación y precisión que los movimientos de aislamiento. Al ser movimientos que implican más grupos musculares que los ejercicios de aislamiento,consiguen un desarrollo más completo, además de quemar más calorías. Se combinan movimientos de halterofilia (Clean and Jerk y Snatch) con powerlifting (sentadillas y peso muerto, press de banca), movimientos gimnásticos (anillas, dominadas, pino, cuerda...), aeróbicos (carrera, remo, comba, burpees, saltos...), kettlebell o mancuernas. La finalidad es mejorar en los 10 aspectos del <i>fitness</i>:</p>
-<ol class="enumeration">
-  <li>Resistencia cardiorespiratoria</li>
-  <li>Resistencia muscular</li>
-  <li>Fuerza</li>
-  <li>Flexibilidad</li>
-  <li>Potencia</li>
-  <li>Velocidad</li>
-  <li>Coordinación</li>
-  <li>Agilidad</li>
-  <li>Equilibrio</li>
-  <li>Precisión</li>
-</ol>
-<p>La alta intensidad en el entrenamiento se ha demostrado que es la que proporciona mejores adaptaciones tanto físicas como metabólicas. Elevar la intensidad y elevar la potencia son términos equivalentes. En física tenemos:</p>
-<p class="formula"><i>P = w/t</i></p>
-<p>Siendo <i>P</i> potencia, <i>w</i> trabajo y <i>t</i> tiempo, podemos aumentar la potencia incrementando el trabajo o disminuyendo el tiempo. De aquí surgen las dos modalidades de trabajo en CrossFit:</p>
-<ul><strong>AMRAP</strong> o <i>As Many Rounds As Possible</i> o dado un tiempo de trabajo fijo, hacer el mayor número de rondas de la rutina propuesta. Aumentar el trabajo respecto al tiempo para aumentar la potencia.</ul>
-<ul><strong>For Time</strong> se trata de, dada una rutina, hacerla en el menor tiempo posible. Disminuir el tiempo respecto al trabajo para aumentar la potencia.</ul>
-<p>En VAM CrossFit le damos más importancia a la calidad de los movimientos que a la carga o a le velocidad de ejecución. Creemos que un movimiento bien ejecutado va a dejar más margen de mejora, y va a situar al atleta en una zona de trabajo segura, evitando lesiones y aumentando su coordinación y eficiencia a lahora de aplicar una fuerza. Primero calidad.</p>
-<p><i>Todo esto está muy bien pero el CrossFit no es para mi. No estoy nada en forma...</i> <strong>ERROR:</strong> el CrossFit es para todos. Cada persona tendrá que adaptar el volumen, la intensidad o, incluso, el ejercicio a sus capacidades. La idea es mejorar el estado de forma, independientemente de cuál sea éste.</p>
-<p>Las clases son guiadas, de una hora, y suelen constar de tres partes:</p>
-<ol class="enumeration">
-  <li><strong>Calentamiento:</strong> prepara los músculos y las articulaciones para trabajar en condiciones óptimas. Previene lesiones y mejora rangos de movimiento.</li>
-  <li><strong>Fuerza y/o Técnica:</strong> se trabaja fuerza o se practica un movimiento complejo para preparar el entrenamiento posterior. En función del tipo de trabajo se elegirán cargas en base al 1RM o repetición máxima.</li>
-  <li><strong>MetCon o Condicionamiento Metabólico:</strong> cuando pensamos en CrossFit pensamos inconscientemente en esta parte de la clase. Tratamos de hacer una rutina en el menor tiempo posible, siempre dándole prioridad a la técnica y a la buena forma. Aquí se combinan distintos tipos de movimientos consiguiendo que el entrenamiento no sea monótono y nos haga mejorar en todas las capacidades físicas.</li>
-</ol>
-
-<h2 id="class-halterofilia">Halterofilia</h2>
-<p>La halterofilia es la parte más técnica y que más perfeccionamiento requiere, por eso en estas clases específicas se practica la técnica y ejercicios específicos para mejorar en los movimientos olímpicos. Analizamos el movimiento y lo dividimos para mejorar en cada etapa, haciendo incidencia en los puntos más importantes mediante movimientos parciales o ejercicios accesorios o adaptaciones.</p>
-
-<h2 id="class-endurance">Endurance</h2>
-<p>Enfocado a mejorar la capacidad cardiovascular. Mucho remo, carrera y ejercicios con el peso corporal.</p>
-
-<h2 id="class-team">Team CrossFit</h2>
-<p>Entrenamiento metabólico en el que el trabajo se reparte entre los integrantes de un equipo. Permite mayor intensidad por intervalos y require compenetración y estrategia. Suelen ser entrenamientos más largos en los que se trabaja por turnos... o no... pásate y descúbrelo.</p>
-
-<h2 id="class-gimnasticos">Gimnásticos</h2>
-<p>Nos centramos en movimientos en los que se utiliza el propio cuerpo: Anillas, dominadas, pino, cuerda, saltos, etc.</p>
-
-<h2 id="class-openbox">Open Box</h2>
-<p>Durante las horas de open box podrás venir al box a practicar esos movimientos que más te cuestan... o los que más te gustan. Tendrás el material y el espacio dispnible para lo que prefieras. Estas clases no son guiadas pero, si tienes alguna duda, puedes preguntarnos.</p>
-
-    </div>
-    <div id="precios">
-      <p class="big-text">Precios</p>
-<table>
-  <tbody><tr>
-    <td>Socio 2 días/semana</td>
-    <td>52€/mes</td>
-    <td>145€/trimestre</td>
-  </tr>
-  <tr>
-    <td>Socio 3 días/semana</td>
-    <td>62€/mes</td>
-    <td>168€/trimestre</td>
-  </tr>
-  <tr>
-    <td>Socio 4 días/semana</td>
-    <td>78€/mes</td>
-    <td>210€/trimestre</td>
-  </tr>
-  <tr>
-    <td>Socio ilimitado</td>
-    <td>92€/mes</td>
-    <td>252€/trimestre</td>
-  </tr>
-</tbody></table>
-<p class="big-text">Precios Matinales (hasta las 15h)</p>
-<table>
-  <tbody><tr>
-    <td>Socio 2 días/semana</td>
-    <td>47€/mes</td>
-    <td> </td>
-  </tr>
-  <tr>
-    <td>Socio 3 días/semana</td>
-    <td>57€/mes</td>
-    <td> </td>
-  </tr>
-  <tr>
-    <td>Socio 4 días/semana</td>
-    <td>67€/mes</td>
-    <td> </td>
-  </tr>
-  <tr>
-    <td>Socio ilimitado</td>
-    <td>82€/mes</td>
-    <td> </td>
-  </tr>
-</tbody></table>
-
-    </div>
-    <div id="signup">
-      <a target="_blank" href="http://reservas.vamcrossfit.com/contratar.aspx">¡Contrata aquí tu clase!</a>
     </div>
   </div>
-</div>
+
+  <div id="entrena-con-nosotros" class="section">
+    <div class="container">
+      <h1>Entrena con nosotros</h1>
+      <div id="horario">
+        <p class="big-text">Horario</p>
+        <table>
+          <tbody><tr>
+            <th></th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+            <th>Sábado</th>
+          </tr>
+          <tr>
+            <th scope="row">7.00</th>
+            <td></td>
+            <td><a href="http://www.vamcrossfit.com/#class-halterofilia">Halterofilia</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td></td>
+            <td><a href="http://www.vamcrossfit.com/#class-halterofilia">Halterofilia</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">8.00</th>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="#">VAM Weightlifting</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">9.00</th>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-halterofilia">Halterofilia</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-halterofilia">Halterofilia</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+          </tr>
+          <tr>
+            <th scope="row">10.00</th>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="#">Yoga</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-halterofilia">Halterofilia</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-halterofilia">Halterofilia</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+          </tr>
+          <tr>
+            <th scope="row">11.00</th>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-halterofilia">Halterofilia</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-gimnasticos">Gimnásticos</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="#">CrossFit Kids</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+          </tr>
+          <tr>
+            <th scope="row">12.00</th>
+            <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+          </tr>
+          <tr>
+            <th scope="row">13.00</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+          </tr>
+          <tr>
+            <th scope="row">13.30</th>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">14.00</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="#">VAM Weightlifting</a></td>
+          </tr>
+          <tr>
+            <th scope="row">14.30</th>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">15.30</th>
+            <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">16.00</th>
+            <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">17.00</th>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-endurance">Endurance</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">18.00</th>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">19.00</th>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="#">Yoga</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">20.00</th>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-gimnasticos">Gimnásticos</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-halterofilia">Halterofilia</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">21.00</th>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td><a href="http://www.vamcrossfit.com/#class-crossfit">CrossFit</a><br><a href="http://www.vamcrossfit.com/#class-openbox">Open Box</a></td>
+            <td></td>
+          </tr>
+          </tbody></table>
+
+      </div>
+      <div id="class-type">
+        <p class="big-text">Tipos de clases</p>
+        <h2 id="class-crossfit">CrossFit</h2>
+        <p>Entrenamiento funcional constantemente variado de alta intensidad</p>
+        <p>Los movimientos funcionales son aquellos en los que hacemos gestos que tienen transferencia a otros deportes o a la vida cotidiana. Son movimientos multiarticulares que quieren de más coordinación y precisión que los movimientos de aislamiento. Al ser movimientos que implican más grupos musculares que los ejercicios de aislamiento,consiguen un desarrollo más completo, además de quemar más calorías. Se combinan movimientos de halterofilia (Clean and Jerk y Snatch) con powerlifting (sentadillas y peso muerto, press de banca), movimientos gimnásticos (anillas, dominadas, pino, cuerda...), aeróbicos (carrera, remo, comba, burpees, saltos...), kettlebell o mancuernas. La finalidad es mejorar en los 10 aspectos del <i>fitness</i>:</p>
+        <ol class="enumeration">
+          <li>Resistencia cardiorespiratoria</li>
+          <li>Resistencia muscular</li>
+          <li>Fuerza</li>
+          <li>Flexibilidad</li>
+          <li>Potencia</li>
+          <li>Velocidad</li>
+          <li>Coordinación</li>
+          <li>Agilidad</li>
+          <li>Equilibrio</li>
+          <li>Precisión</li>
+        </ol>
+        <p>La alta intensidad en el entrenamiento se ha demostrado que es la que proporciona mejores adaptaciones tanto físicas como metabólicas. Elevar la intensidad y elevar la potencia son términos equivalentes. En física tenemos:</p>
+        <p class="formula"><i>P = w/t</i></p>
+        <p>Siendo <i>P</i> potencia, <i>w</i> trabajo y <i>t</i> tiempo, podemos aumentar la potencia incrementando el trabajo o disminuyendo el tiempo. De aquí surgen las dos modalidades de trabajo en CrossFit:</p>
+        <ul><strong>AMRAP</strong> o <i>As Many Rounds As Possible</i> o dado un tiempo de trabajo fijo, hacer el mayor número de rondas de la rutina propuesta. Aumentar el trabajo respecto al tiempo para aumentar la potencia.</ul>
+        <ul><strong>For Time</strong> se trata de, dada una rutina, hacerla en el menor tiempo posible. Disminuir el tiempo respecto al trabajo para aumentar la potencia.</ul>
+        <p>En VAM CrossFit le damos más importancia a la calidad de los movimientos que a la carga o a le velocidad de ejecución. Creemos que un movimiento bien ejecutado va a dejar más margen de mejora, y va a situar al atleta en una zona de trabajo segura, evitando lesiones y aumentando su coordinación y eficiencia a lahora de aplicar una fuerza. Primero calidad.</p>
+        <p><i>Todo esto está muy bien pero el CrossFit no es para mi. No estoy nada en forma...</i> <strong>ERROR:</strong> el CrossFit es para todos. Cada persona tendrá que adaptar el volumen, la intensidad o, incluso, el ejercicio a sus capacidades. La idea es mejorar el estado de forma, independientemente de cuál sea éste.</p>
+        <p>Las clases son guiadas, de una hora, y suelen constar de tres partes:</p>
+        <ol class="enumeration">
+          <li><strong>Calentamiento:</strong> prepara los músculos y las articulaciones para trabajar en condiciones óptimas. Previene lesiones y mejora rangos de movimiento.</li>
+          <li><strong>Fuerza y/o Técnica:</strong> se trabaja fuerza o se practica un movimiento complejo para preparar el entrenamiento posterior. En función del tipo de trabajo se elegirán cargas en base al 1RM o repetición máxima.</li>
+          <li><strong>MetCon o Condicionamiento Metabólico:</strong> cuando pensamos en CrossFit pensamos inconscientemente en esta parte de la clase. Tratamos de hacer una rutina en el menor tiempo posible, siempre dándole prioridad a la técnica y a la buena forma. Aquí se combinan distintos tipos de movimientos consiguiendo que el entrenamiento no sea monótono y nos haga mejorar en todas las capacidades físicas.</li>
+        </ol>
+
+        <h2 id="class-halterofilia">Halterofilia</h2>
+        <p>La halterofilia es la parte más técnica y que más perfeccionamiento requiere, por eso en estas clases específicas se practica la técnica y ejercicios específicos para mejorar en los movimientos olímpicos. Analizamos el movimiento y lo dividimos para mejorar en cada etapa, haciendo incidencia en los puntos más importantes mediante movimientos parciales o ejercicios accesorios o adaptaciones.</p>
+
+        <h2 id="class-endurance">Endurance</h2>
+        <p>Enfocado a mejorar la capacidad cardiovascular. Mucho remo, carrera y ejercicios con el peso corporal.</p>
+
+        <h2 id="class-team">Team CrossFit</h2>
+        <p>Entrenamiento metabólico en el que el trabajo se reparte entre los integrantes de un equipo. Permite mayor intensidad por intervalos y require compenetración y estrategia. Suelen ser entrenamientos más largos en los que se trabaja por turnos... o no... pásate y descúbrelo.</p>
+
+        <h2 id="class-gimnasticos">Gimnásticos</h2>
+        <p>Nos centramos en movimientos en los que se utiliza el propio cuerpo: Anillas, dominadas, pino, cuerda, saltos, etc.</p>
+
+        <h2 id="class-openbox">Open Box</h2>
+        <p>Durante las horas de open box podrás venir al box a practicar esos movimientos que más te cuestan... o los que más te gustan. Tendrás el material y el espacio dispnible para lo que prefieras. Estas clases no son guiadas pero, si tienes alguna duda, puedes preguntarnos.</p>
+
+      </div>
+      <div id="precios">
+        <p class="big-text">Precios</p>
+        <table>
+          <tbody><tr>
+            <td>Socio 2 días/semana</td>
+            <td>56€/mes</td>
+            <td>157€/trimestre</td>
+          </tr>
+          <tr>
+            <td>Socio 3 días/semana</td>
+            <td>67€/mes</td>
+            <td>181€/trimestre</td>
+          </tr>
+          <tr>
+            <td>Socio 4 días/semana</td>
+            <td>84€/mes</td>
+            <td>226€/trimestre</td>
+          </tr>
+          <tr>
+            <td>Socio ilimitado</td>
+            <td>99€/mes</td>
+            <td>271€/trimestre</td>
+          </tr>
+          </tbody></table>
+        <p class="big-text">Precios Matinales (hasta las 15h)</p>
+        <table>
+          <tbody><tr>
+            <td>Socio 2 días/semana</td>
+            <td>51€/mes</td>
+            <td>137€/trimestre</td>
+          </tr>
+          <tr>
+            <td>Socio 3 días/semana</td>
+            <td>62€/mes</td>
+            <td>166€/trimestre</td>
+          </tr>
+          <tr>
+            <td>Socio 4 días/semana</td>
+            <td>73€/mes</td>
+            <td>195€/trimestre</td>
+          </tr>
+          <tr>
+            <td>Socio ilimitado</td>
+            <td>89€/mes</td>
+            <td>229€/trimestre</td>
+          </tr>
+          </tbody></table>
+        <p class="big-text">Precios Open Box</p>
+        <table>
+          <tbody>
+          <tr>
+            <td>Socio 3 días/semana</td>
+            <td>46/mes</td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td>Socio 4 días/semana</td>
+            <td>56€/mes</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Socio ilimitado</td>
+            <td>68€/mes</td>
+            <td></td>
+          </tr>
+          </tbody></table>
+
+      </div>
+      <div id="signup">
+        <a target="_blank" href="https://vam.wodbuster.com/contratar.aspx">¡Contrata aquí tu clase!</a>
+      </div>
+    </div>
+  </div>
 
 
 </div>
 
-		<!-- Hero footer: will stick at the bottom -->
+<!-- Hero footer: will stick at the bottom -->
 <div class="hero-foot has-text-centered ">
   <p class="small-text">© 2022 VAM CrossFit | Calle Puerto de Guadarrama 41, nave 20. Polígono industrial Las Nieves. 28935 Móstoles. Madrid</p>
   <div id="outbound" class="cookies-foot">
@@ -355,46 +396,46 @@
   </div>
 </div>
 
-	
-
-
-		<div id="cookies-warning" class="has-text-centered">
-		<p>Esta página usa cookies propias y de terceros, como todas las demás webs del universo conocido. Una <a href="https://www.boe.es/boe/dias/2012/03/31/pdfs/BOE-A-2012-4442.pdf">ley</a> nos obliga a mostrar este aviso. <span class="btn clickable" onclick="acceptCookies()">Aceptar</span></p>
-	</div>
 
 
 
-	<script>
-		function acceptCookies() {
-			setAcceptedCookiesToTrue();
-	    hideCookiesWarning();
-
-		}
-
-		function hideCookiesWarning() {
-	    var warning = document.getElementById("cookies-warning");
-	    warning.style.display = "none";
-        var footer = document.getElementById("outbound");
-        footer.className = "";
-	  }
-
-		function setAcceptedCookiesToTrue() {
-		  var expiryDate = new Date(new Date().setDate(new Date().getDate()+90));
-		  document.cookie = "acceptedCookies=true; expires=" + expiryDate + "; path=/";
-		}
-	</script>
+<div id="cookies-warning" class="has-text-centered">
+  <p>Esta página usa cookies propias y de terceros, como todas las demás webs del universo conocido. Una <a href="https://www.boe.es/boe/dias/2012/03/31/pdfs/BOE-A-2012-4442.pdf">ley</a> nos obliga a mostrar este aviso. <span class="btn clickable" onclick="acceptCookies()">Aceptar</span></p>
+</div>
 
 
-		<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-77736459-1', 'auto');
-	  ga('send', 'pageview');
+<script>
+  function acceptCookies() {
+    setAcceptedCookiesToTrue();
+    hideCookiesWarning();
 
-	</script>
+  }
+
+  function hideCookiesWarning() {
+    var warning = document.getElementById("cookies-warning");
+    warning.style.display = "none";
+    var footer = document.getElementById("outbound");
+    footer.className = "";
+  }
+
+  function setAcceptedCookiesToTrue() {
+    var expiryDate = new Date(new Date().setDate(new Date().getDate()+90));
+    document.cookie = "acceptedCookies=true; expires=" + expiryDate + "; path=/";
+  }
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77736459-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 
 
